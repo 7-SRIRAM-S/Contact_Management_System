@@ -1,0 +1,291 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #555;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+  color: #f4f4f9;
+}
+
+/* Main Content */
+main {
+  max-width: 1100px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+main p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Form Styles */
+form {
+  background: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background: #555;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+.btn-danger {
+  background: #e63946;
+}
+
+.btn-danger:hover {
+  background: #c53030;
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.contact-name {
+  font-weight: bold;
+}
+
+.contact-details {
+  color: #666;
+}
+
+.no-contacts {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.no-contacts a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.no-contacts a:hover {
+  color: #000;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, 
+.table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f4f4f4;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #333;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form, 
+  main {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul a {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  input[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
+/* Button-like Link Styles */
+.btn-link {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.btn-link:hover {
+  background: #555;
+}
+
+/* Active state for better click effect */
+.btn-link:active {
+  background: #222;
+}
+
+/* Specific styles for the "Back to Contacts" and "Add Contact" buttons */
+.btn-add {
+  background: #4CAF50; /* Green for Add Contact */
+}
+
+.btn-add:hover {
+  background: #45a049;
+}
+
+.btn-back {
+  background: #f44336; /* Red for Back to Contacts */
+}
+
+.btn-back:hover {
+  background: #e53935;
+}
+
+.btn-link:active {
+  background: #222;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Add a New Contact</h1>
+
+
+    <form method="POST">
+        <label for="name">Name: </label>
+        <input type="text" name="name" required><br>
+        
+        <label for="phone">Phone: </label>
+        <input type="text" name="phone" required><br>
+        
+        <label for="email">Email: </label>
+        <input type="email" name="email" required><br>
+
+        <label for="city">City: </label>
+        <input type="text" name="city" required><br>
+        
+        <input type="submit" value="Add Contact">
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Contacts List</a>
+    <footer>
+        <p>&copy; 2024 Contact Management System</p>
+    </footer>
+</body>
+</html>
