@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<center>
+<hr>
+    <h1>Contact Management System</h1>
+<hr>
+    <a href="{{ url_for('add_contact') }}" class="btn-link btn-add">>Add Contact</a>
+    <br><hr>
+
+</center>
+<table class="table">
+    <thead><tr>
+        <th>Contact Name</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>City</th>
+        <th>more</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+        {% for name, details in contacts.items() %}
+
+                <td>{{ name }}</td>
+                <td>{{ details['phone'] }}</td>
+                <td>{{ details['email'] }}</td>
+                <td>{{details['city']}}</td>
+                <td><a href="{{ url_for('delete_contact', contact_name=name) }}" class="btn-link btn-back">>Delete</a></td>
+    </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</body>
+</html>
